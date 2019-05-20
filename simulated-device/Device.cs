@@ -106,14 +106,14 @@ namespace simulated_device
         }
 
 
-        public async Task SendDeviceToCloudMessageAsync()
+        public async Task SendDeviceToCloudMessageAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             double minTemperature = 20;
             double minHumidity = 60;
 
             Random random = new Random();
 
-            while(true)
+            while(!cancellationToken.IsCancellationRequested)
             {
                 double currentTemperature = minTemperature + random.NextDouble() * 15;
                 double currentHumidity = minHumidity + random.NextDouble() * 20;
@@ -126,18 +126,18 @@ namespace simulated_device
 
                 string messageString = JsonConvert.SerializeObject(telemetryDataPoint);
                 var message = new Message(Encoding.ASCII.GetBytes(messageString));
-                await deviceClient.SendEventAsync(message);
+                await deviceClient.SendEventAsync(message, cancellationToken);
               
                 System.Console.WriteLine($"{DateTime.Now} > Sending message: {messageString}");
 
-                await Task.Delay(telemetryInterval);
+                await Task.Delay(telemetryInterval, cancellationToken);
                 
             }       
         }
 
-        public async Task ReceiveCloudToDeviceMessagesAsync()
+        public async Task ReceiveCloudToDeviceMessagesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
-            while (true)
+            while (!cancellationToken.IsCancellationRequested)
             {
                 Message receivedMessage = await deviceClient.ReceiveAsync();
 

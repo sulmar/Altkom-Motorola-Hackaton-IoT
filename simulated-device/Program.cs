@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace simulated_device
@@ -9,7 +10,9 @@ namespace simulated_device
         static async Task Main(string[] args)
         {
             Console.WriteLine("Hello IoT!");
-            System.Console.WriteLine("Press Enter to exit.");
+            System.Console.WriteLine("Press Ctrl+C to exit.");
+
+            CancellationTokenSource cts = new CancellationTokenSource();  
 
             Device device = new Device();
 
@@ -19,13 +22,20 @@ namespace simulated_device
 
             await device.SetHandlers();
 
-            device.ReceiveCloudToDeviceMessagesAsync();
+            device.ReceiveCloudToDeviceMessagesAsync(cts.Token);
 
-            await device.SendDeviceToCloudMessageAsync();
+            await device.SendDeviceToCloudMessageAsync(cts.Token);
 
-          //  await device.SendDeviceToCloudBlobAsync("filename.jpg");
+            System.Console.CancelKeyPress += (s, e) =>  
+            {  
+                e.Cancel = true;  
+                cts.Cancel();  
+                Console.WriteLine("Exiting...");  
+            };  
+  
+           // await device.SendDeviceToCloudBlobAsync("filename.jpg", cts.Token);
 
-            Console.ReadLine();
+            
         }
 
         // C# =< 7.1
