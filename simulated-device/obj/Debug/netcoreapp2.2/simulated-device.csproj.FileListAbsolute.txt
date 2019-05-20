@@ -1,0 +1,11 @@
+/Users/exact/Projects/hackaton-motorola/simulated-device/bin/Debug/netcoreapp2.2/simulated-device.deps.json
+/Users/exact/Projects/hackaton-motorola/simulated-device/bin/Debug/netcoreapp2.2/simulated-device.runtimeconfig.json
+/Users/exact/Projects/hackaton-motorola/simulated-device/bin/Debug/netcoreapp2.2/simulated-device.runtimeconfig.dev.json
+/Users/exact/Projects/hackaton-motorola/simulated-device/bin/Debug/netcoreapp2.2/simulated-device.dll
+/Users/exact/Projects/hackaton-motorola/simulated-device/bin/Debug/netcoreapp2.2/simulated-device.pdb
+/Users/exact/Projects/hackaton-motorola/simulated-device/obj/Debug/netcoreapp2.2/simulated-device.csprojAssemblyReference.cache
+/Users/exact/Projects/hackaton-motorola/simulated-device/obj/Debug/netcoreapp2.2/simulated-device.csproj.CoreCompileInputs.cache
+/Users/exact/Projects/hackaton-motorola/simulated-device/obj/Debug/netcoreapp2.2/simulated-device.AssemblyInfoInputs.cache
+/Users/exact/Projects/hackaton-motorola/simulated-device/obj/Debug/netcoreapp2.2/simulated-device.AssemblyInfo.cs
+/Users/exact/Projects/hackaton-motorola/simulated-device/obj/Debug/netcoreapp2.2/simulated-device.dll
+/Users/exact/Projects/hackaton-motorola/simulated-device/obj/Debug/netcoreapp2.2/simulated-device.pdb
