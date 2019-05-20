@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 
 namespace simulated_device
 {
+
+    // dotnet add package Microsoft.Azure.Devices.Client
     public class Device
     {
         // {your device connection string}
