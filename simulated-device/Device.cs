@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
 using Microsoft.Azure.Devices.Shared;
@@ -82,10 +84,6 @@ namespace simulated_device
             await deviceClient.UpdateReportedPropertiesAsync(reportedProperties);
 
             System.Console.WriteLine("Sent.");
-
-
-
-
         }
 
         public Task OnDesiredPropertiesUpdate(TwinCollection desiredProperties, object userContext)
@@ -131,13 +129,45 @@ namespace simulated_device
                 System.Console.WriteLine($"{DateTime.Now} > Sending message: {messageString}");
 
                 await Task.Delay(telemetryInterval);
-
-
-
                 
-            }
-            
-
+            }       
         }
+
+        public async Task ReceiveCloudToDeviceMessagesAsync()
+        {
+            while (true)
+            {
+                Message receivedMessage = await deviceClient.ReceiveAsync();
+
+                if (receivedMessage == null)
+                {
+                    continue;
+                }
+
+                var receivedJson = Encoding.UTF8.GetString(receivedMessage.GetBytes());
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"Received message {receivedJson}");
+                Console.ResetColor();
+
+                await deviceClient.CompleteAsync(receivedMessage);
+            }
+        }
+
+        public async Task SendDeviceToCloudBlobAsync(string filename, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            Console.WriteLine($"Uploading file {filename}");
+
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
+            using (Stream stream = new FileStream(filename, FileMode.Open))
+            {
+                await deviceClient.UploadToBlobAsync(Path.GetFileName(filename), stream, cancellationToken);
+            }
+
+            Console.WriteLine($"Time to upload {filename} {watch.ElapsedMilliseconds}ms");
+        }
+
+
     }
 }

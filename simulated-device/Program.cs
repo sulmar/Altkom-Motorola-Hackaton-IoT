@@ -19,7 +19,11 @@ namespace simulated_device
 
             await device.SetHandlers();
 
+            device.ReceiveCloudToDeviceMessagesAsync();
+
             await device.SendDeviceToCloudMessageAsync();
+
+          //  await device.SendDeviceToCloudBlobAsync("filename.jpg");
 
             Console.ReadLine();
         }
