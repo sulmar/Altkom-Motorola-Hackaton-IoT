@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simulated-device", "simulated-device\simulated-device.csproj", "{FF16894A-30D4-4425-A94C-876E1F45534C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "device-manager", "device-manager\device-manager.csproj", "{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{FF16894A-30D4-4425-A94C-876E1F45534C}.Release|x64.Build.0 = Release|Any CPU
 		{FF16894A-30D4-4425-A94C-876E1F45534C}.Release|x86.ActiveCfg = Release|Any CPU
 		{FF16894A-30D4-4425-A94C-876E1F45534C}.Release|x86.Build.0 = Release|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Debug|x64.Build.0 = Debug|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Debug|x86.Build.0 = Debug|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|x64.ActiveCfg = Release|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|x64.Build.0 = Release|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
