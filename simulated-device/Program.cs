@@ -35,7 +35,7 @@ namespace simulated_device
   
            // await device.SendDeviceToCloudBlobAsync("filename.jpg", cts.Token);
 
-            
+             
         }
 
         // C# =< 7.1
