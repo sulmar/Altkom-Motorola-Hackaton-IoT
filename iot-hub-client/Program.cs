@@ -13,7 +13,7 @@ namespace iot_hub_client
             
             IotHubService service = new IotHubService();
 
-            await service.SetVolume(50);
+            await service.SetVolume("Marcin-Device", 50);
 
         }
     }
@@ -35,10 +35,10 @@ namespace iot_hub_client
             this.serviceClient = serviceClient;
         }
 
-        public async Task SetVolume(byte volume)
-        {
-            string deviceId = "Marcin-Device";
- 
+        // Understand and invoke direct methods from IoT Hub
+        // https://docs.microsoft.com/bs-latn-ba/azure/iot-hub/iot-hub-devguide-direct-methods
+        public async Task SetVolume(string deviceId, byte volume)
+        { 
             CloudToDeviceMethod method = new CloudToDeviceMethod(nameof(SetVolume), TimeSpan.FromSeconds(10));
             method.SetPayloadJson(volume.ToString());
 
