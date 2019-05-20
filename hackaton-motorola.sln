@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simulated-device", "simulat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "device-manager", "device-manager\device-manager.csproj", "{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iot-hub-client", "iot-hub-client\iot-hub-client.csproj", "{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|x64.Build.0 = Release|Any CPU
 		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|x86.ActiveCfg = Release|Any CPU
 		{2E33BE1C-CBDD-47E5-AEA2-4CAB3CDDC392}.Release|x86.Build.0 = Release|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Debug|x64.Build.0 = Debug|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Debug|x86.Build.0 = Debug|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Release|x64.ActiveCfg = Release|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Release|x64.Build.0 = Release|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8383A65-5BB7-4284-BC6B-5EC0B4F5DA9D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
