@@ -6774,11 +6774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/exact/Projects/hackaton-motorola/simulated-device/simulated-device.csproj",
+      "projectUniqueName": "/Users/exact/Projects/hackaton-motorola-1/simulated-device/simulated-device.csproj",
       "projectName": "simulated-device",
-      "projectPath": "/Users/exact/Projects/hackaton-motorola/simulated-device/simulated-device.csproj",
+      "projectPath": "/Users/exact/Projects/hackaton-motorola-1/simulated-device/simulated-device.csproj",
       "packagesPath": "/Users/exact/.nuget/packages/",
-      "outputPath": "/Users/exact/Projects/hackaton-motorola/simulated-device/obj/",
+      "outputPath": "/Users/exact/Projects/hackaton-motorola-1/simulated-device/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
